@@ -1,0 +1,4 @@
+Othelo
+======
+
+Othelo játék 
