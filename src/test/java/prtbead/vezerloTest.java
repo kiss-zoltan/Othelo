@@ -18,14 +18,14 @@ public class vezerloTest {
 
 	@Test
 	public void testGetLep() {
-
 		assertEquals(1, t.getLep());
 	}
 
-	@Test
+	/*@Test
 	public void testVezerlo() {
-
-	}
+		vezerlo t1 =new vezerlo(n, n1);
+		assertTrue(t1.equals(t));
+	}*/
 
 	@Test
 	public void testVege() {
@@ -43,10 +43,30 @@ public class vezerloTest {
 
 	@Test
 	public void testLepes() {
+		assertTrue(t.lepes(4, 6));
+		assertTrue(t.lepes(4, 4));
+		int [][]tomb=t.table.atad();
+		tomb=tombtolt();
+		tomb[0][0]=0;
+		tomb[0][2]=1;
+		t.table.setPalya(tomb);
+		assertFalse(t.lepes(0, 0));
+		tomb[0][2]=2;
+		assertTrue(t.lepes(0, 0));
 		
-		assertTrue(t.lepes(3, 3));
-		assertTrue(t.lepes(3, 2));
-		assertTrue(t.lepes(3, 3));
+
+	}
+
+
+	public int[][] tombtolt (){
+		int [][]tomb=new int[8][8];
+		
+		for (int i = 0; i < 8; i++) {
+			for (int j = 0; j < 8; j++) {
+				tomb[i][j]=1;
+			}
+		}
+		return tomb;
 	}
 
 }

@@ -47,7 +47,7 @@ public class jdbc {
 			if (!existstable())
 				createtable();
 		} catch (SQLException e) {
-			//logger.warn(e.getMessage());
+			logger.warn(e.getMessage());
 		}
 
 	}
@@ -100,7 +100,7 @@ public class jdbc {
 			}
 
 		} catch (SQLException e) {
-			//logger.warn(e.getMessage());
+			logger.warn(e.getMessage());
 
 		}
 		return lista;
@@ -141,7 +141,7 @@ public class jdbc {
 					+ " (nev varchar2(50),eredmeny number)");
 			con.commit();
 		} catch (SQLException e) {
-			//logger.warn(e.getMessage());
+			logger.warn(e.getMessage());
 
 		}
 	}
