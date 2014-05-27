@@ -96,7 +96,7 @@ public class vezerlo {
 	 *            lépés y kordinátája
 	 * @return true ha van érvényes lépése annak a színek amelyik következik
 	 */
-	public boolean lepes(int x, int y) {
+	public boolean lepes(int x, int y,String s) {
 		if (!table.lephet(lep)) {
 			lep = lep == 1 ? 2 : 1;
 			logger.info("Aktuális játékos nem léphetett a másik lép.");
@@ -109,7 +109,7 @@ public class vezerlo {
 						.getFeher());
 				pl[1].setPont(pl[1].getSzin() == 1 ? table.getFekete() : table
 						.getFeher());
-				jdbc k = new jdbc("eredmeny");
+				jdbc k = new jdbc(s);
 				k.feltolt(pl[0].getNev(), pl[0].getPont());
 				k.feltolt(pl[1].getNev(), pl[1].getPont());
 				logger.info("Vege a játéknak.");

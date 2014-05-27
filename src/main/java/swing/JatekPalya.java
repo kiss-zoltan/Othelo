@@ -219,7 +219,7 @@ public class JatekPalya extends JFrame {
 
 				gomb.addActionListener(new ActionListener() {
 					public void actionPerformed(ActionEvent arg0) {
-						if (vez.lepes(gomb.x, gomb.y)) {
+						if (vez.lepes(gomb.x, gomb.y,"eredmeny")) {
 							feltoltPalyaElemek();
 							renderPalya();
 							pont1.setText(String.valueOf(vez.table.getFekete()));

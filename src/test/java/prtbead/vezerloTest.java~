@@ -43,16 +43,16 @@ public class vezerloTest {
 
 	@Test
 	public void testLepes() {
-		assertTrue(t.lepes(4, 6,"teszt"));
-		assertTrue(t.lepes(4, 4,"teszt"));
+		assertTrue(t.lepes(4, 6,"test"));
+		assertTrue(t.lepes(4, 4,"test"));
 		int [][]tomb=t.table.atad();
 		tomb=tombtolt();
 		tomb[0][0]=0;
 		tomb[0][2]=1;
 		t.table.setPalya(tomb);
-		assertFalse(t.lepes(0, 0,"teszt"));
+		assertFalse(t.lepes(0, 0,"test"));
 		tomb[0][2]=2;
-		assertTrue(t.lepes(0, 0,"teszt"));
+		assertTrue(t.lepes(0, 0,"test"));
 		
 
 	}
